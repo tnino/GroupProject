@@ -9,7 +9,7 @@ document.querySelector("#activity-btn-run").addEventListener(
         //prevent default behavior (ie. page reload)
         e.preventDefault();
         //console.log for tracking/testing
-        console.log("activity-btn-run clicked");
+        console.log("activity-btn-run click");
         //location variable for future purposes
         //const location = document.querySelector("#location").value;
 
