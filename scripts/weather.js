@@ -18,8 +18,7 @@ let city = "Austin";
 			//fetch data from openweathermap api
 			fetch(url + city + "&appid=" + apiKey) //replace Austin with location after testing complete
 				.then(function(response) {
-                    let data = response.json();
-                    return data;
+                    return(response.json());
 				})
 				.then(function(data) {
                     console.log(data);
@@ -31,11 +30,9 @@ let city = "Austin";
                     };
                     console.log(weather);
                 })
-/*
 				.catch(function(error) {
                     console.log("Weather information unavailable. Error: " + error.message);
                 });
-*/
 		},
 		false
 	);
