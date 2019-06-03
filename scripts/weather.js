@@ -1,9 +1,8 @@
-let city = "Austin";
-
-(function(city) {
+let weather = location => {
 	const url = "http://api.openweathermap.org/data/2.5/weather?q=";
     const apiKey = "fc480c5aaec93162c2d8fd255dd1bfdb";
     let weather = {};
+    console.log(location);
 
 	//event listener, run on window load
 	window.addEventListener(
@@ -16,7 +15,7 @@ let city = "Austin";
 
 
 			//fetch data from openweathermap api
-			fetch(url + city + "&appid=" + apiKey) //replace Austin with location after testing complete
+			fetch(url + location.city + "&appid=" + apiKey) //replace Austin with location after testing complete
 				.then(function(response) {
                     return(response.json());
 				})
@@ -36,4 +35,4 @@ let city = "Austin";
 		},
 		false
 	);
-})(city);
+};
