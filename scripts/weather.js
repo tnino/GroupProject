@@ -1,42 +1,194 @@
-const url = "http://api.openweathermap.org/data/2.5/weather?q=";
-const apiKey = "fc480c5aaec93162c2d8fd255dd1bfdb";
+let 
+weather = location 
+=> {
+
+    const 
+url = "http://api.openweathermap.org/data/2.5/weather?q=";
+
+const 
+apiKey = "fc480c5aaec93162c2d8fd255dd1bfdb";
+
+const 
+units = "&units=imperial";
+
+let 
+weather = {};
 
 
-//event listener for activity button
-document.querySelector("#activity-btn-run").addEventListener(
-    "click",
-    function(e) {
-        //prevent default behavior (ie. page reload)
-        e.preventDefault();
-        //console.log for tracking/testing
-        console.log("activity-btn-run click");
-        //location variable for future purposes
-        //const location = document.querySelector("#location").value;
+    console.log(location);
 
-        //document.querySelector("#location").value = "";
 
-        //fetch data from openweathermap api
-        fetch(url + "austin" + "&appid=" + apiKey) //replace Austin with location after testing complete
-            .then(function(response) {
-                console.log(response.json());
-                return response.json();
-            })
-            .then(function(response) {
-                updateUISuccess(response);
-            })
-            .catch(function() {
-                updateUIFailure();
-            });
-    },
-    false
-);
 
-//function to update the page if the api call is successful
-function updateUISuccess() {
-    console.log("updateUISuccess run");
+//fetch data from openweathermap api
+
+fetch(url +
+location.city +
+"&appid=" + 
+apiKey+ units)
+
+.then(response
+=> {
+
+return 
+response.json();
+
+})
+
+.then(data
+=> {
+
+console.log(data);
+
+// function windCardinal(degree){
+
+// if (degree>337.5) return 'North';
+
+// if (degree>292.5) return 'Northwest';
+
+// if(degree>247.5) return 'West';
+
+// if(degree>202.5) return 'Southwest';
+
+// if(degree>157.5) return 'South;
+
+// if(degree>122.5) return 'Southeast';
+
+// if(degree>67.5) return 'East';
+
+// if(degree>22.5){return 'Northeast';}
+
+// return 'North;
+
+// }
+
+weather = {
+
+city: 
+data.name,
+
+condition: 
+data.weather[0].main,
+
+temperature: 
+data.main.temp,
+
+windDirection: 
+data.wind.deg,
+
+windSpeed: 
+data.wind.speed,
+
+
 };
 
-//function to update the page if the api call returns an error
-function updateUIFailure() {
-    console.log("updateUIFailure run");
-};
+console.log(weather);
+
+simpleSuccessUIUpdate(weather);
+
+//successUpdateUI(weather);
+
+})
+
+.catch(error
+=> {
+
+console.log("Weather information unavailable. Error: " +
+error.message);
+
+});
+
+}
+
+
+
+//variables 
+
+var 
+returnWeather;
+
+console.log(weather);
+
+
+
+// //Using this function to update the running modal.
+
+// //Here we tell the user if it is a good idea to go running or not.
+
+// $('#myModal1').on('shown.bs.modal', function (display) {
+
+
+
+// if (weather.temperature <= 40 ){
+
+// returnWeather = $("#modal-body-run").append(document.createTextNode ( `In ${weather.city} there is ${weather.condition} with a temperature of ${weather.temperature} degrees fahrenheit. The wind direction is ${weather.windDirection}
+ with a speed of ${weather.windSpeed} MPH. Run another time!`));
+
+// // console.log(weather.city);
+
+// } if (weather.temperature >= 90 ){
+
+
+
+// returnWeather = $("#modal-body-run").append(document.createTextNode (`In ${weather.city} there is ${weather.condition} with a temperature of ${weather.temperature} degrees fahrenheit. The wind direction is ${weather.windDirection}
+ with a speed of ${weather.windSpeed} MPH. Run another time!`));
+
+
+// } else {
+
+// returnWeather = $("#modal-body-run").append(document.createTextNode (`In ${weather.city} there is ${weather.condition} with a temperature of ${weather.temperature} degrees fahrenheit. The wind direction is ${weather.windDirection}
+ with a speed of ${weather.windSpeed} MPH. Enjoy your run!`));
+
+
+// display();
+
+// }
+
+// });
+
+
+
+
+
+// //simple textContent update for testing purposes
+
+// const simpleSuccessUIUpdate = weather => {
+
+// // document.getElementById("modal-body-run").textContent = `In ${weather.city} there is ${weather.condition} with a temperature of ${weather.temperature} degrees fahrenheit. The wind direction is ${weather.windDirection}
+ with a speed of ${weather.windSpeed}. Enjoy your run!`
+
+
+
+
+
+// $('#myModal1').on('shown.bs.modal', function (display) {
+
+// if (weather.temperature <= 40 ){
+
+// document.getElementById("modal-body-run").textContent = `In ${weather.city} there is ${weather.condition} with a temperature of ${weather.temperature} degrees fahrenheit. The wind direction is ${weather.windDirection}
+ with a speed of ${weather.windSpeed}. Run another time!`
+
+// // console.log(weather.city);
+
+// } if (weather.temperature >= 90 ){
+
+
+
+// document.getElementById("modal-body-run").textContent = `In ${weather.city} there is ${weather.condition} with a temperature of ${weather.temperature} degrees fahrenheit. The wind direction is ${weather.windDirection}
+ with a speed of ${weather.windSpeed}. Run another time!`
+
+
+// } else {
+
+// document.getElementById("modal-body-run").textContent = `In ${weather.city} there is ${weather.condition} with a temperature of ${weather.temperature} degrees fahrenheit. The wind direction is ${weather.windDirection}
+ with a speed of ${weather.windSpeed}. Enjoy your run!`
+
+
+// display();
+
+// }
+
+// });
+
+
+
+// }
