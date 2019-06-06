@@ -1,0 +1,37 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="utf-8">
+      <title>Movie and GIPHY API</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+        <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+      </head>
+    
+    <body>
+      <div class="container">
+        <h1>Giphy Movie Search</h1>
+        <div id="movie-search"></div>
+        <!-- This form will be where users input data about the movies -->
+        <form class="movie-form">
+          <label id="search">Search for a movie</label>
+          <input type="text" id="movie-input">
+          <!-- This button will trigger our Axios call -->
+          <input class="movieBtn" type="submit" value="Search">
+        </form>
+      </div>
+    <div class="container-one">
+        <p id="title">Movie Title:</p>
+        <p id="year">Year Released:</p>
+        <p id ="genre">Genre:</p>
+        <p id="actors">Actors:</p>
+        <img id="movie-giphy"></img>
+    </div>
+      <script type="text/javascript" src="api.js">
+      </script>
+    </body>
+    
+    </html>
