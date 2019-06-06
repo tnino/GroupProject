@@ -2,305 +2,403 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<title>Document</title>
-	<!-- <link
-			rel="stylesheet"
-			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-			crossorigin="anonymous"
-		/> -->
-	<link rel="stylesheet" href="styles/style.css" />
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Leckerli+One|Luckiest+Guy|Syncopate&display=swap"
+    rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+    Remove the navbar's default margin-bottom and rounded borders 
+.navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+
+    /* Add a gray background color and some padding to the footer */
+
+    body {
+      background: black;
+      /* font-family: 'Luckiest Guy', cursive; */
+      size: 24px;
+    }
+
+    .container {
+      width: 100px;
+      height: 300px;
+    }
+
+    h3 {
+      color: #b38600;
+      font-family: 'Syncopate', sans-serif;
+    }
+
+    .Instructions {
+      position: center;
+    }
+
+    button {
+      color: #664d00;
+      background: #cc9900;
+      position: center;
+      font-size: 16px;
+      padding: 1%;
+      margin: 10px;
+      font-family: 'Syncopate', sans-serif;
+      width: 40%;
+      height: 2%;
+    }
+
+    .modal-content {
+      position: absolute;
+      top: 40px;
+      left: 40px;
+      right: 40px;
+      bottom: 40px;
+      color: white;
+      background: #cc9900;
+      font-family: 'Syncopate', sans-serif;
+    }
+
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgb(12, 1, 10);
+    }
+
+    .btn-default {
+      color: white;
+      background: #cc9900;
+      width: 100%
+    }
+  </style>
 </head>
 
 <body>
-	<!-- <div class="btn-group" role="group" aria-label="Basic example">
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Weather APP</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">weather</a></li>
+          <li><a href="#">maps</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- <div class="btn-group" role="group" aria-label="Basic example">
 			<button type="button" class="btn btn-secondary" id="activity-btn-run">Run</button>
 		</div> -->
 
-	<div class="Instructions text-center">
-		<h3>Please pick an activity that you will like to do today</h3><br>
+  <div class="Instructions text-center">
+    <h3>Please pick an activity that you will like to do today</h3><br>
 
-		<div class="col-sm-4" "container">
-			<img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"><br>
-			<button type="button" class="sport1" data-toggle="modal" data-target="#myModal1" id="activity-btn-run">Run</button>
-			<br>
-		</div>
+    <div class="col-sm-4" "container">
+      <img
+        src="https://img.purch.com/w/660/aHR0cDovL3d3dy5saXZlc2NpZW5jZS5jb20vaW1hZ2VzL2kvMDAwLzEwMC8yMTcvb3JpZ2luYWwvcnVubmluZy1iZWFjaC1zaHV0dGVyc3RvY2suanBn"
+        class="img-responsive" style="height:200px; width:400px" alt="Image"><br>
+      <button type="button" class="sport1" data-toggle="modal" data-target="#myModal1">Run</button><br>
+    </div>
 
-		<div class="col-sm-4" "container">
-			<img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"><br>
-			<button type="button" class="sport2" data-toggle="modal" data-target="#myModal2" id="activity-btn-swim">Swim</button>
-		</div>
+    <div class="col-sm-4" "container">
+      <img
+        src="http://images.ctfassets.net/oartd9t7ehdh/2UTKm4LMsMWGO08k8aQOWY/05f318c19dafb346d6f8dd99d78971e1/620x346-Protect-Yourself-If-You-Swim-In-A-Lake-Or-River.jpg"
+        class="img-responsive" style="height:200px; width:400px" alt="Image"><br>
+      <button type="button" class="sport2" data-toggle="modal" data-target="#myModal2">Swim</button><br>
+    </div>
 
-		<div class="col-sm-4" "container">
-			<img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"><br>
-			<button type="button" class="sport3" data-toggle="modal" data-target="#myModal3" id="activity-btn-rockclimb">Rock climb</button>
-		</div>
+    <div class="col-sm-4" "container">
+      <img
+        src="https://drmarkgriffiths.files.wordpress.com/2018/03/climate-change-and-the-danger-of-rock-climbing.jpg?w=604"
+        class="img-responsive" style="height:200px; width:400px" alt="Image"><br>
+      <button type="button" class="sport3" data-toggle="modal" data-target="#myModal3">Rock climb</button><br>
+    </div>
 
-		<div class="col-sm-4" "container">
-			<img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"><br>
-			<button type="button" class="sport1" data-toggle="modal" data-target="#myModal4" id="activity-btn-snowboard">Snowboard</button>
-		</div>
+    <div class="col-sm-4" "container">
+      <img
+        src="https://image.jimcdn.com/app/cms/image/transf/none/path/sa6549607c78f5c11/image/ifd93896f939f28ac/version/1510562413/best-snowboard-destinations-in-europe-avoriaz-copyright-ditty-about-summer-european-best-destinations.jpg"
+        class="img-responsive" style="height:200px; width:400px" alt="Image"><br>
+      <button type="button" class="sport1" data-toggle="modal" data-target="#myModal4">Snowboard</button><br>
+    </div>
 
-		<div class="col-sm-4" "container">
-			<img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"><br>
-			<button type="button" class="sport2" data-toggle="modal" data-target="#myModal5" id="activity-btn-kayaking">kayaking</button>
-		</div>
+    <div class="col-sm-4" "container">
+      <img src="https://mk0theadventuregfnyq.kinstacdn.com/wp-content/uploads/BestDryBagForKayaking1.jpg"
+        class="img-responsive" style="height:200px; width:400px" alt="Image"><br>
+      <button type="button" class="sport2" data-toggle="modal" data-target="#myModal5">kayaking</button><br>
+    </div>
 
-		<div class="col-sm-4" "container">
-			<img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"><br>
-			<button type="button" class="sport3" data-toggle="modal" data-target="#myModal6" id="activity-btn-crossfit">Crossfit</button>
-		</div>
+    <div class="col-sm-4" "container">
+      <img
+        src="https://games-assets.crossfit.com/s3fs-public/styles/hero/public/Watch%20the%20CrossFit%20Games%20on%20CBS2.png?itok=7xIeP5_y"
+        class="img-responsive" style="height:200px; width:400px" alt="Image"><br>
+      <button type="button" class="sport3" data-toggle="modal" data-target="#myModal6">Crossfit</button><br>
+    </div>
 
-		<div class="col-sm-4" "container">
-			<img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"><br>
-			<button type="button" class="sport1" data-toggle="modal" data-target="#myModal7" id="activity-btn-skate" id="activity-btn-skate">Skate</button>
-		</div>
+    <div class="col-sm-4" "container">
+      <img src="https://www.nwselfstorage.com/theme/northwest/images/content/2-blog-3060-Ways-to-Enjoy-Outdoors.jpg"
+        class="img-responsive" style="height:200px; width:400px" alt="Image"><br>
+      <button type="button" class="sport1" data-toggle="modal" data-target="#myModal7">Skate</button><br>
+    </div>
 
-		<div class="col-sm-4" "container">
-			<img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"><br>
-			<button type="button" class="sport2" data-toggle="modal" data-target="#myModal8" id="activity-btn-yoga">Yoga</button>
-		</div>
+    <div class="col-sm-4" "container">
+      <img
+        src="https://www.lpzoo.org/sites/default/files/styles/blog_detail/public/field/image/blog_post/20130809_TR_yoga_384_blog.jpg?itok=ityCVrgS"
+        class="img-responsive" style="height:200px; width:400px" alt="Image"><br>
+      <button type="button" class="sport2" data-toggle="modal" data-target="#myModal8">Yoga</button><br>
+    </div>
 
-		<div class="col-sm-4" "container">
-			<img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"><br>
-			<button type="button" class="sport3" data-toggle="modal" data-target="#myModal9" id="activity-btn-boxing">Boxing</button>
-		</div>
-	</div>
-	</div><br>
-	</div><br><br>
-
-
-
-	<!-- running Modal -->
-	<div class="modal fade" id="myModal1" role="dialog">
-		<div class="modal-dialog">
-
-
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title">run</h4>
-				</div>
-				<div class="modal-body">
-					<p> running outside is great </p>
-
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Great, I am ready to run</button>
-					<button type="button" class="btn btn-default" data-dismiss="modal">Nevermind, let me try something
-						else!</button>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Swim model-->
-	<div class="modal fade" id="myModal2" role="dialog">
-		<div class="modal-dialog">
-
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title">Swim</h4>
-				</div>
-				<div class="modal-body">
-					<p> swiming is fun </p>
-
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Great, I am ready to
-						swim</button>
-					<button type="button" class="btn btn-default" data-dismiss="modal">Nevermind, let me try something
-						else!</button>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- rock climbing Model-->
-	<div class="modal fade" id="myModal3" role="dialog">
-		<div class="modal-dialog">
+    <div class="col-sm-4" "container">
+      <img
+        src="https://media.istockphoto.com/photos/female-boxing-practicing-outdoors-picture-id475453942?k=6&m=475453942&s=612x612&w=0&h=AycB0yYNjH0lQIiSgVaaur1Id-jy5LWs_EQRfN9Xang="
+        class="img-responsive" style="height:200px; width:400px" alt="Image"><br>
+      <button type="button" class="sport3" data-toggle="modal" data-target="#myModal9">Boxing</button><br>
+    </div>
 
 
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title">rock climbing</h4>
-				</div>
-				<div class="modal-body">
-					<p> Rock climbing is great </p>
-
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Great, I am ready to rock
-						climb</button>
-					<button type="button" class="btn btn-default" data-dismiss="modal">Nevermind, let me try something
-						else!</button>
-				</div>
-			</div>
-		</div>
-	</div>
+  </div>
+  </div><br>
+  </div><br><br>
 
 
-	<!-- Snowboard Modal -->
-	<div class="modal fade" id="myModal4" role="dialog">
-		<div class="modal-dialog">
+
+  <!-- running Modal -->
+  <div class="modal fade" id="myModal1" role="dialog">
+    <div class="modal-dialog">
 
 
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title">Snowboard</h4>
-				</div>
-				<div class="modal-body">
-					<p> Snowboarding is fun </p>
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">run</h4>
+        </div>
+        <div class="modal-body" id="modal-body-run"></div>
+        <p> running outside is great </p>
 
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Great, I am ready to
-						Snowboard</button>
-					<button type="button" class="btn btn-default" data-dismiss="modal">Nevermind, let me try something
-						else!</button>
-				</div>
-			</div>
-		</div>
-	</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Great, I am ready to run</button><br>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Nevermind, let me try something
+          else!</button>
+      </div>
+    </div>
 
+  </div>
+  </div>
+  <!-- Swim model-->
+  <div class="modal fade" id="myModal2" role="dialog">
+    <div class="modal-dialog">
 
-	<!-- kayaking model-->
-	<div class="modal fade" id="myModal5" role="dialog">
-		<div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Swim</h4>
+        </div>
+        <div class="modal-body" id="modal-body-swim">
+          <p> swiming is fun </p>
 
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title">kayaking</h4>
-				</div>
-				<div class="modal-body">
-					<p> kayaking is fun at the lake </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Great, I am ready to swim</button><br>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Nevermind, let me try something
+            else!</button>
+        </div>
+      </div>
 
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Great, I am ready to go
-						kayaking</button>
-					<button type="button" class="btn btn-default" data-dismiss="modal">Nevermind, let me try something
-						else!</button>
-				</div>
-			</div>
-		</div>
-	</div>
+    </div>
+  </div>
 
-	<!-- Crossfit Model-->
-	<div class="modal fade" id="myModal6" role="dialog">
-		<div class="modal-dialog">
+  <!-- rock climbing Model-->
+  <div class="modal fade" id="myModal3" role="dialog">
+    <div class="modal-dialog">
 
 
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title">Crossfit</h4>
-				</div>
-				<div class="modal-body">
-					<p> Crossfit is so fun </p>
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">rock climbing</h4>
+        </div>
+        <div class="modal-body" id="modal-body-climb">
+          <p> Rock climbing is great </p>
 
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Great, I am ready to go to
-						Crossfit</button>
-					<button type="button" class="btn btn-default" data-dismiss="modal">Nevermind, let me try something
-						else!</button>
-				</div>
-			</div>
-		</div>
-	</div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Great, I am ready to rock
+            climb</button><br>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Nevermind, let me try something
+            else!</button>
+        </div>
+      </div>
 
-	<!-- Skate Modal -->
-	<div class="modal fade" id="myModal7" role="dialog">
-		<div class="modal-dialog">
+    </div>
+  </div>
 
 
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title">skate</h4>
-				</div>
-				<div class="modal-body">
-					<p> skating at the park is always a good time</p>
-
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Great, I am ready to
-						skate</button>
-					<button type="button" class="btn btn-default" data-dismiss="modal">Nevermind, let me try something
-						else!</button>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- yoga model-->
-	<div class="modal fade" id="myModal8" role="dialog">
-		<div class="modal-dialog">
-
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title">Yoga</h4>
-				</div>
-				<div class="modal-body">
-					<p> Yoga is relaxing </p>
-
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Great, I am ready to go to
-						Yoga</button>
-					<button type="button" class="btn btn-default" data-dismiss="modal">Nevermind, let me try something
-						else!</button>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- boxing Model-->
-	<div class="modal fade" id="myModal9" role="dialog">
-		<div class="modal-dialog">
+  <!-- Snowboard Modal -->
+  <div class="modal fade" id="myModal4" role="dialog">
+    <div class="modal-dialog">
 
 
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title">Boxing</h4>
-				</div>
-				<div class="modal-body">
-					<p> boxing is empowering</p>
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Snowboard</h4>
+        </div>
+        <div class="modal-body" id="modal-body-board"></div>
+        <p> Snowboarding is fun </p>
 
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Great, I am ready to go to boxing
-						class</button>
-					<button type="button" class="btn btn-default" data-dismiss="modal">Nevermind, let me try something
-						else!</button>
-				</div>
-			</div>
-		</div>
-	</div>
-	</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Great, I am ready to Snowboard</button><br>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Nevermind, let me try something
+          else!</button>
+      </div>
+    </div>
 
-	<script type="text/javascript" src="scripts/location.js"></script>
-	<script type="text/javascript" src="scripts/weather.js"></script>
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-	</script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-	</script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-	</script>
+  </div>
+  </div>
+
+
+  <!-- kayaking model-->
+  <div class="modal fade" id="myModal5" role="dialog">
+    <div class="modal-dialog">
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">kayaking</h4>
+        </div>
+        <div class="modal-body" id="modal-body-kayak">
+          <p> kayaking is fun at the lake </p>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Great, I am ready to go
+            kayaking</button><br>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Nevermind, let me try something
+            else!</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Crossfit Model-->
+  <div class="modal fade" id="myModal6" role="dialog">
+    <div class="modal-dialog">
+
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Crossfit</h4>
+        </div>
+        <div class="modal-body" id="modal-body-cross">
+          <p> Crossfit is so fun </p>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Great, I am ready to go to
+            Crossfit</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Nevermind, let me try something
+            else!</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Skate Modal -->
+  <div class="modal fade" id="myModal7" role="dialog">
+    <div class="modal-dialog">
+
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">skate</h4>
+        </div>
+        <div class="modal-body" id="modal-body-skate">
+          <p> skating at the park is always a good time</p>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Great, I am ready to skate</button><br>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Nevermind, let me try something
+            else!</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- yoga model-->
+  <div class="modal fade" id="myModal8" role="dialog">
+    <div class="modal-dialog">
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Yoga</h4>
+        </div>
+        <div class="modal-body" id="modal-body-yoga">
+          <p> Yoga is relaxing </p>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Great, I am ready to go to
+            Yoga</button><br>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Nevermind, let me try something
+            else!</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- boxing Model-->
+  <div class="modal fade" id="myModal9" role="dialog">
+    <div class="modal-dialog">
+
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Boxing</h4>
+        </div>
+        <div class="modal-body" id="modal-body-box">
+          <p> boxing is empowering</p>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Great, I am ready to go to boxing
+            class</button><br>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Nevermind, let me try something
+            else!</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </div>
+
+
 </body>
 
 </html>
