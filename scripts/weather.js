@@ -4,7 +4,6 @@ let weather = location => {
     const units = "&units=imperial";
     let weather = {};
     
-	console.log(location);
 
     //fetch data from openweathermap api
     fetch(url + location.city + "&appid=" + apiKey+ units)
@@ -13,20 +12,9 @@ let weather = location => {
         })
         .then(data => {
             console.log(data);
-            // function  windCardinal(degree){
-            //     if (degree>337.5) return 'North';
-            //     if (degree>292.5) return 'Northwest';
-            //     if(degree>247.5) return 'West';
-            //     if(degree>202.5) return 'Southwest';
-            //     if(degree>157.5) return 'South;
-            //     if(degree>122.5) return 'Southeast';
-            //     if(degree>67.5) return 'East';
-            //     if(degree>22.5){return 'Northeast';}
-            //     return 'North;
-            // }
             weather = {
                 city: data.name,
-                condition: data.weather[0].main,
+                condition: data.weather[0].description,
                 temperature: data.main.temp,
                 windDirection: data.wind.deg,
                 windSpeed: data.wind.speed,
