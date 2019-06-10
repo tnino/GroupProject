@@ -29,48 +29,6 @@ let weather = location => {
         });
 }
 
-//variables 
-var returnWeather;
-console.log(weather);
-
-// //Using this function to update the running modal. 
-// //Here we tell the user if it is a good idea to go running or not. 
-// $('#myModal1').on('shown.bs.modal', function (display) {
-
-//     if (weather.temperature <= 40 ){
-//     returnWeather = $("#modal-body-run").append(document.createTextNode ( `In ${weather.city} there is ${weather.condition} with a temperature of ${weather.temperature} degrees fahrenheit. The wind direction is ${weather.windDirection} with a speed of ${weather.windSpeed} MPH. Run another time!`));
-//    // console.log(weather.city);
-//     } if (weather.temperature >= 90 ){
-
-//     returnWeather =  $("#modal-body-run").append(document.createTextNode (`In ${weather.city} there is ${weather.condition} with a temperature of ${weather.temperature} degrees fahrenheit. The wind direction is ${weather.windDirection} with a speed of ${weather.windSpeed} MPH. Run another time!`));
-    
-//     } else {
-//        returnWeather = $("#modal-body-run").append(document.createTextNode (`In ${weather.city} there is  ${weather.condition} with a temperature of ${weather.temperature} degrees fahrenheit. The wind direction is ${weather.windDirection} with a speed of ${weather.windSpeed} MPH. Enjoy your run!`));
-       
-//        display();
-//     }
-//   });
- 
-
-  
-// //simple textContent update for testing purposes
-// const simpleSuccessUIUpdate = weather => {
-//   // document.getElementById("modal-body-run").textContent = `In ${weather.city} there is ${weather.condition} with a temperature of ${weather.temperature} degrees fahrenheit. The wind direction is ${weather.windDirection} with a speed of ${weather.windSpeed}. Enjoy your run!`
 
 
-// $('#myModal1').on('shown.bs.modal', function (display) {
-// if (weather.temperature <= 40 ){
-//     document.getElementById("modal-body-run").textContent = `In ${weather.city} there is ${weather.condition} with a temperature of ${weather.temperature} degrees fahrenheit. The wind direction is ${weather.windDirection} with a speed of ${weather.windSpeed}. Run another time!`
-//     // console.log(weather.city);
-//     } if (weather.temperature >= 90 ){
 
-//         document.getElementById("modal-body-run").textContent = `In ${weather.city} there is ${weather.condition} with a temperature of ${weather.temperature} degrees fahrenheit. The wind direction is ${weather.windDirection} with a speed of ${weather.windSpeed}. Run another time!`
-    
-//     } else {
-//         document.getElementById("modal-body-run").textContent = `In ${weather.city} there is ${weather.condition} with a temperature of ${weather.temperature} degrees fahrenheit. The wind direction is ${weather.windDirection} with a speed of ${weather.windSpeed}. Enjoy your run!`
-       
-//        display();
-//     }
-//   });
-
-// }

@@ -12,67 +12,78 @@
 			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
 			crossorigin="anonymous"
 		/> -->
-	<link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/style.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
+    
 
 </head>
-
+<style>body{background: black;}</style>
 <body>
 	<!-- <div class="btn-group" role="group" aria-label="Basic example">
 			<button type="button" class="btn btn-secondary" id="activity-btn-run">Run</button>
 		</div> -->
 
-	<div class="Instructions text-center">
-		<h3>Please pick an activity that you will like to do today</h3><br>
-
-		<div class="col-sm-4" "container">
-			<img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"><br>
-			<button type="button" class="sport1" data-toggle="modal" data-target="#myModal1" id="activity-btn-run">Run</button>
-			<br>
-		</div>
-
-		<div class="col-sm-4" "container">
-			<img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"><br>
-			<button type="button" class="sport2" data-toggle="modal" data-target="#myModal2" id="activity-btn-swim">Swim</button>
-		</div>
-
-		<div class="col-sm-4" "container">
-			<img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"><br>
-			<button type="button" class="sport3" data-toggle="modal" data-target="#myModal3" id="activity-btn-rockclimb">Rock climb</button>
-		</div>
-
-		<div class="col-sm-4" "container">
-			<img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"><br>
-			<button type="button" class="sport1" data-toggle="modal" data-target="#myModal4" id="activity-btn-snowboard">Snowboard</button>
-		</div>
-
-		<div class="col-sm-4" "container">
-			<img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"><br>
-			<button type="button" class="sport2" data-toggle="modal" data-target="#myModal5" id="activity-btn-kayaking">kayaking</button>
-		</div>
-
-		<div class="col-sm-4" "container">
-			<img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"><br>
-			<button type="button" class="sport3" data-toggle="modal" data-target="#myModal6" id="activity-btn-crossfit">Crossfit</button>
-		</div>
-
-		<div class="col-sm-4" "container">
-			<img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"><br>
-			<button type="button" class="sport1" data-toggle="modal" data-target="#myModal7" id="activity-btn-skate" id="activity-btn-skate">Skate</button>
-		</div>
-
-		<div class="col-sm-4" "container">
-			<img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"><br>
-			<button type="button" class="sport2" data-toggle="modal" data-target="#myModal8" id="activity-btn-yoga">Yoga</button>
-		</div>
-
-		<div class="col-sm-4" "container">
-			<img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"><br>
-			<button type="button" class="sport3" data-toggle="modal" data-target="#myModal9" id="activity-btn-boxing">Boxing</button>
-		</div>
+        <div class="Instructions text-center">
+            <h1 id="location">Location: </h1>
+                 <h2 id="condition">Condition: <!-- <script>$("#condition").innerHTML = weatherResponse.data.weather[0].description -->
+                    </script> </h2><br>
+                <div class="col-sm-4" "container">
+                  <img
+                    src="https://img.purch.com/w/660/aHR0cDovL3d3dy5saXZlc2NpZW5jZS5jb20vaW1hZ2VzL2kvMDAwLzEwMC8yMTcvb3JpZ2luYWwvcnVubmluZy1iZWFjaC1zaHV0dGVyc3RvY2suanBn"
+                    class="img-responsive" style="height:200px; width:400px" alt="Image"><br>
+                  <button type="button" class="sport1" data-toggle="modal" data-target="#myModal1">Run</button><br>
+                </div>
+                <div class="col-sm-4" "container">
+                  <img
+                    src="http://images.ctfassets.net/oartd9t7ehdh/2UTKm4LMsMWGO08k8aQOWY/05f318c19dafb346d6f8dd99d78971e1/620x346-Protect-Yourself-If-You-Swim-In-A-Lake-Or-River.jpg"
+                    class="img-responsive" style="height:200px; width:400px" alt="Image"><br>
+                  <button type="button" class="sport2" data-toggle="modal" data-target="#myModal2">Swim</button><br>
+                </div>
+                <div class="col-sm-4" "container">
+                  <img
+                    src="https://drmarkgriffiths.files.wordpress.com/2018/03/climate-change-and-the-danger-of-rock-climbing.jpg?w=604"
+                    class="img-responsive" style="height:200px; width:400px" alt="Image"><br>
+                  <button type="button" class="sport3" data-toggle="modal" data-target="#myModal3">Rock climb</button><br>
+                </div>
+                <div class="col-sm-4" "container">
+                  <img
+                    src="https://image.jimcdn.com/app/cms/image/transf/none/path/sa6549607c78f5c11/image/ifd93896f939f28ac/version/1510562413/best-snowboard-destinations-in-europe-avoriaz-copyright-ditty-about-summer-european-best-destinations.jpg"
+                    class="img-responsive" style="height:200px; width:400px" alt="Image"><br>
+                  <button type="button" class="sport1" data-toggle="modal" data-target="#myModal4">Snowboard</button><br>
+                </div>
+                <div class="col-sm-4" "container">
+                  <img src="https://mk0theadventuregfnyq.kinstacdn.com/wp-content/uploads/BestDryBagForKayaking1.jpg"
+                    class="img-responsive" style="height:200px; width:400px" alt="Image"><br>
+                  <button type="button" class="sport2" data-toggle="modal" data-target="#myModal5">kayaking</button><br>
+                </div>
+                <div class="col-sm-4" "container">
+                  <img
+                    src="https://games-assets.crossfit.com/s3fs-public/styles/hero/public/Watch%20the%20CrossFit%20Games%20on%20CBS2.png?itok=7xIeP5_y"
+                    class="img-responsive" style="height:200px; width:400px" alt="Image"><br>
+                  <button type="button" class="sport3" data-toggle="modal" data-target="#myModal6">Crossfit</button><br>
+                </div>
+                <div class="col-sm-4" "container">
+                  <img src="https://www.nwselfstorage.com/theme/northwest/images/content/2-blog-3060-Ways-to-Enjoy-Outdoors.jpg"
+                    class="img-responsive" style="height:200px; width:400px" alt="Image"><br>
+                  <button type="button" class="sport1" data-toggle="modal" data-target="#myModal7">Skate</button><br>
+                </div>
+                <div class="col-sm-4" "container">
+                  <img
+                    src="https://www.lpzoo.org/sites/default/files/styles/blog_detail/public/field/image/blog_post/20130809_TR_yoga_384_blog.jpg?itok=ityCVrgS"
+                    class="img-responsive" style="height:200px; width:400px" alt="Image"><br>
+                  <button type="button" class="sport2" data-toggle="modal" data-target="#myModal8">Yoga</button><br>
+                </div>
+                <div class="col-sm-4" "container">
+                  <img
+                    src="https://media.istockphoto.com/photos/female-boxing-practicing-outdoors-picture-id475453942?k=6&m=475453942&s=612x612&w=0&h=AycB0yYNjH0lQIiSgVaaur1Id-jy5LWs_EQRfN9Xang="
+                    class="img-responsive" style="height:200px; width:400px" alt="Image"><br>
+                  <button type="button" class="sport3" data-toggle="modal" data-target="#myModal9">Boxing</button><br>
+                </div>
+        
 	</div>
 	</div><br>
 	</div><br><br>
@@ -90,9 +101,10 @@
 					<h4 class="modal-title">Run</h4>
 				</div>
 				<div class="modal-body" id="modal-body-run">
-                        <p> running outside is great </p>
-
-
+                        <!-- <p class="temperature"> Temperature: </p>
+                        <p class="wind-deg">Wind Direction: </p>
+                        <p class="wind-speed">Wind Speed: </p>
+                        <p class="run-message"></p> -->
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">Great, I am ready to run</button>
@@ -298,6 +310,8 @@
     <script type="text/javascript" src="scripts/weather.js"></script>
     
     <script type="text/javascript" src=scripts/modal.js></script>
+
+    <script type="text/javascript" src="scripts/p5.js"></script>
    
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">

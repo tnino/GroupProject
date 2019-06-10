@@ -29,4 +29,3 @@ window.addEventListener(
 	},
 	false
 );
-
