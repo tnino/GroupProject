@@ -1,42 +1,36 @@
-const url = "http://api.openweathermap.org/data/2.5/weather?q=";
-const apiKey = "fc480c5aaec93162c2d8fd255dd1bfdb";
+let weather = location => {
+	const url = "http://api.openweathermap.org/data/2.5/weather?q=";
+    const apiKey = "fc480c5aaec93162c2d8fd255dd1bfdb";
+    const units = "&units=imperial";
+    let weather = {};
+    
 
+ 
 
-//event listener for activity button
-document.querySelector("#activity-btn-run").addEventListener(
-    "click",
-    function(e) {
-        //prevent default behavior (ie. page reload)
-        e.preventDefault();
-        //console.log for tracking/testing
-        console.log("activity-btn-run click");
-        //location variable for future purposes
-        //const location = document.querySelector("#location").value;
+    //fetch data from openweathermap api
+    fetch(url + location.city + "&appid=" + apiKey+ units)
+        .then(response => {
+            return response.json();
+        })
+        .then(data => {
+            console.log(data);
+            weather = {
+                city: data.name,
+                condition: data.weather[0].description,
+                temperature: data.main.temp,
+                windDirection: data.wind.deg,
+                windSpeed: data.wind.speed,
+            
+            };
+            console.log(weather);
+            simpleSuccessUIUpdate(weather);
+            //successUpdateUI(weather);
+        })
+        .catch(error => {
+            console.log("Weather information unavailable. Error: " + error.message);
+        });
+}
 
-        //document.querySelector("#location").value = "";
-
-        //fetch data from openweathermap api
-        fetch(url + "austin" + "&appid=" + apiKey) //replace Austin with location after testing complete
-            .then(function(response) {
-                console.log(response.json());
-                return response.json();
-            })
-            .then(function(response) {
-                updateUISuccess(response);
-            })
-            .catch(function() {
-                updateUIFailure();
-            });
-    },
-    false
-);
-
-//function to update the page if the api call is successful
-function updateUISuccess() {
-    console.log("updateUISuccess run");
-};
-
-//function to update the page if the api call returns an error
-function updateUIFailure() {
-    console.log("updateUIFailure run");
-};
+// we need to make this location work.
+//   document.getElementById("apps").innerHTML =
+//             <h1>(${location.city})</h1>
