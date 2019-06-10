@@ -12,13 +12,11 @@ Tatiana Nino
 
 # Project Title
 
-this App was design for athletes that enjoy working out outside. Users can log in and ased on their location they can know what the weather will be appropriate to work out.
+this App was design for athletes that enjoy working out outside. Users can log in and based on their location they can know what the weather will be appropriate to work out outdoors.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Installing
 
