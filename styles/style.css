@@ -1,36 +1,12 @@
 /* Add a gray background color and some padding to the footer */
 
-.navbar {
-    margin-bottom: 0;
-    border-radius: 0;
-  }
- 
-  body {
+body {
     background-color: black;
     color:yellowgreen;
     font-family: ‘Luckiest Guy’, cursive;
     size: 24px;
   }
- 
-  h1, h2 {
-    color: #cc9900;
-  }
 
-  .container {
-    width: 100px;
-    height: 300px;
-    
-  }
- 
-  h3 {
-    color: #f00a0a;
-    font-family: ‘Syncopate’, sans-serif;
-  }
- 
-  .Instructions {
-    position: center;
-  }
- 
   button {
     color: #664d00;
     background: #cc9900;
@@ -42,6 +18,27 @@
     width: 40%;
     height: 2%;
   }
+
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+
+ 
+  #location, #condition {
+    color: #cc9900;
+  }
+
+  .container {
+    width: 100px;
+    height: 300px;
+  }
+ 
+ 
+  .Instructions {
+    position: center;
+  }
+ 
  
   .modal-content {
     position: absolute;
