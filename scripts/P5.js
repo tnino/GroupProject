@@ -118,3 +118,4 @@ PenroseLSystem.prototype.render = function () {
       }
     }
   }
+

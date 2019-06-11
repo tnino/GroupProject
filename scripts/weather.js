@@ -5,8 +5,6 @@ let weather = location => {
     let weather = {};
     
 
- 
-
     //fetch data from openweathermap api
     fetch(url + location.city + "&appid=" + apiKey+ units)
         .then(response => {
@@ -14,6 +12,7 @@ let weather = location => {
         })
         .then(data => {
             console.log(data);
+            SuccessUIUpdate(data);
             weather = {
                 city: data.name,
                 condition: data.weather[0].description,
@@ -22,15 +21,15 @@ let weather = location => {
                 windSpeed: data.wind.speed,
             
             };
-            console.log(weather);
             simpleSuccessUIUpdate(weather);
-            //successUpdateUI(weather);
+            console.log(weather);
         })
         .catch(error => {
             console.log("Weather information unavailable. Error: " + error.message);
         });
 }
 
-// we need to make this location work.
-//   document.getElementById("apps").innerHTML =
-//             <h1>(${location.city})</h1>
+function SuccessUIUpdate(data) {
+    document.getElementById('location').textContent = `Location: ${data.name}`;
+    document.getElementById('condition').textContent = `Conditions: ${data.main.temp}\xB0 F`;
+}

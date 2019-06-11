@@ -1,66 +1,66 @@
 /* Add a gray background color and some padding to the footer */
 
 body {
-  background-color: black;
-  color:yellowgreen;
-  font-family: ‘Luckiest Guy’, cursive;
-  size: 24px;
-}
+    background-color: black;
+    color:yellowgreen;
+    font-family: ‘Luckiest Guy’, cursive;
+    size: 24px;
+  }
 
-button {
-  color: #664d00;
-  background: #cc9900;
-  position: center;
-  font-size: 16px;
-  padding: 1%;
-  margin: 10px;
-  font-family: ‘Syncopate’, sans-serif;
-  width: 40%;
-  height: 2%;
-}
+  button {
+    color: #664d00;
+    background: #cc9900;
+    position: center;
+    font-size: 16px;
+    padding: 1%;
+    margin: 10px;
+    font-family: ‘Syncopate’, sans-serif;
+    width: 40%;
+    height: 2%;
+  }
 
 .navbar {
-  margin-bottom: 0;
-  border-radius: 0;
-}
+    margin-bottom: 0;
+    border-radius: 0;
+  }
 
+ 
+  #location, #condition {
+    color: #cc9900;
+  }
 
-#location, #condition {
-  color: #cc9900;
-}
-
-.container {
-  width: 100px;
-  height: 300px;
-}
-
-
-.Instructions {
-  position: center;
-}
-
-.modal-content {
-  position: absolute;
-  top: 40px;
-  left: 40px;
-  right: 40px;
-  bottom: 40px;
-  color: black;
-  background: #cc9900;
-  font-family: ‘Syncopate’, sans-serif;
-}
-
-.modal {
-  position: fixed;
-  color:white;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: linear-gradient(to left bottom, #f7ff9f, #d1af72, #956b53, #4c3432, #000000);  }
-
-.btn-default {
-  color: white;
-  background: #cc9900;
-  width: 100%
-}
+  .container {
+    width: 100px;
+    height: 300px;
+  }
+ 
+ 
+  .Instructions {
+    position: center;
+  }
+ 
+  .modal-content {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    right: 40px;
+    bottom: 40px;
+    color: black;
+    background: #cc9900;
+    font-family: ‘Syncopate’, sans-serif;
+  }
+ 
+  .modal {
+    position: fixed;
+    color:white;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(to left bottom, #f7ff9f, #d1af72, #956b53, #4c3432, #000000);  }
+ 
+  .btn-default {
+    color: white;
+    background: #cc9900;
+    width: 100%
+  }
