@@ -8,7 +8,9 @@ Tatiana Nino
 #screenshot
 
 
-![alt text](https://screencast.com/t/ggtDsc4Khb)
+![alt text](screenshot.png)
+
+https://tnino.github.io/GroupProject/.
 
 # Project Title
 
