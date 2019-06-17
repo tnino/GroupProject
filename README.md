@@ -8,7 +8,7 @@ Tatiana Nino
 #screenshot
 
 
-![alt text](screenshot.png)
+![alt text](2019-06-17_1624.png)
 
 https://tnino.github.io/GroupProject/.
 
