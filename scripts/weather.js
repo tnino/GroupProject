@@ -30,6 +30,6 @@ let weather = location => {
 }
 
 function SuccessUIUpdate(data) {
-    document.getElementById('location').textContent = `Location: ${data.name}`;
-    document.getElementById('condition').textContent = `Conditions: ${data.main.temp}\xB0 F`;
+    document.getElementById('location').textContent = `You are Located in: ${data.name}`;
+    document.getElementById('condition').textContent = `Weather: ${data.main.temp}\xB0 F`;
 }

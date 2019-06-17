@@ -2,7 +2,6 @@
 
 body {
     background-color: black;
-    color:yellowgreen;
     font-family: ‘Luckiest Guy’, cursive;
     size: 24px;
   }
@@ -12,17 +11,17 @@ body {
     background: #cc9900;
     position: center;
     font-size: 16px;
-    padding: 1%;
-    margin: 10px;
+    padding: 10px;
+    border: 1px solid #4CAF50;
     font-family: ‘Syncopate’, sans-serif;
     width: 40%;
     height: 2%;
   }
 
-.navbar {
+/* .navbar {
     margin-bottom: 0;
     border-radius: 0;
-  }
+  } */
 
  
   #location, #condition {
@@ -35,32 +34,31 @@ body {
   }
  
  
-  .Instructions {
+  .main--activity-pictures {
     position: center;
   }
  
-  .modal-content {
+  .modal--content-text {
     position: absolute;
     top: 40px;
     left: 40px;
     right: 40px;
     bottom: 40px;
     color: black;
-    background: #cc9900;
     font-family: ‘Syncopate’, sans-serif;
   }
  
   .modal {
     position: fixed;
-    color:white;
+    color:black;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background-image: linear-gradient(to left bottom, #f7ff9f, #d1af72, #956b53, #4c3432, #000000);  }
  
-  .btn-default {
-    color: white;
+  .btn--main-button {
+    color: black;
     background: #cc9900;
     width: 100%
   }
